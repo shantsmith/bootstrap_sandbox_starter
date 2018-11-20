@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1 class="display-3 text-center my-4">Media Object</h1>
+        <h1 class="display-3 text-center my-4">Forms</h1>
         <div class="container">
           <div class="row">
             <div class="col-md-3">
@@ -81,95 +81,104 @@
       <div class="container">
         <!--########################START HERE#########################-->
 
-      <!-- MEDIA OBJECT -->
-      <div class="media">
-          <img class="d-flex mr-3" src="img/image4.jpg">
-          <div class="media-body">
-              <h5 class="mt-0">Media heading</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-      </div>
+        <!-- FORM -->
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control form-control-sm" id="name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" class="form-control form-control-lg" placeholder="Enter email">
+                <small class="form-text text-muted">Your email will not be shared with anyone</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Password" readonly>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender">
+                <option>Male</option>
+                <option>Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="file">File input</label>
+                <input type="file" class="form-control-file" id="file">
+                <small class="form-text text-muted" id="fileHelp">Max 3mb size</small>
+            </div>
 
-      <br><br>
+            <fieldset class="form-group">
+                <legend>What are you using this service for?</legend>
+                <div class="form-check">
+                  <label class="form-check-label">
+                      <input type="radio" value="option1" class="form-check-input" checked>
+                      Personal
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                      <input type="radio" value="option1" class="form-check-input" checked>
+                      Commercial Use
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                      <input type="radio" value="option1" class="form-check-input" checked>
+                      Testing
+                  </label>
+                </div>
+            </fieldset>
+            <div class="form-check">
+                <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                    Sign up for newsletter
+                </label>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
 
-      <!-- NESTING MEDIA OBJECTS -->
-      <div class="media">
-          <img class="d-flex mr-3" src="img/image4.jpg">
-          <div class="media-body">
-              <h5>Media heading</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        <br><br>
 
-              <div class="media mt-3">
-              <a class="d-flex pr-3" href="#">
-                  <img src="img/image4.jpg">
-              </a>
-              <div class="media-body">
-                  <h5 class="mt-0">Media heading</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              </div>
-              </div>
-          </div>
-      </div>
+        <!-- INLINE FORM -->
+        <form class="form-inline">
+            <input type="text" id="username" class="form-control mr-2" placeholder="Enter username">
+            <input type="text" id="password" class="form-control mr-2" placeholder="Password">
+            <div class="form-check">
+                <label class="form-check-label mr-2">
+                    <input type="checkbox" class="form-check-input"> Remember me
+                </label>
+            </div>
 
-      <br><br>
+            <button class="btn btn-secondary" type="submit">Submit</button>
+        </form>
 
-      <!-- TOP ALIGNED (DEFAULT) -->
-      <div class="media">
-          <img class="d-flex mr-3 align-self-start" src="img/image4.jpg">
-          <div class="media-body">
-              <h5 class="mt-0">Media heading</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-      </div>
+        <br><br>
 
-      <br><br>
-
-      <!-- CENTER ALIGNED -->
-      <div class="media">
-          <img class="d-flex mr-3 align-self-center" src="img/image4.jpg">
-          <div class="media-body">
-              <h5 class="mt-0">Media heading</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-      </div>
-
-      <br><br>
-
-      <!-- BOTTOM ALIGNED -->
-      <div class="media">
-          <img class="d-flex mr-3 align-self-end" src="img/image4.jpg">
-          <div class="media-body">
-              <h5 class="mt-0">Media heading</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-      </div>
-
-      <br><br>
-
-      <!-- MEDIA LIST -->
-      <ul class="list-unstyled">
-          <li class="media">
-              <img src="img/image4.jpg" class="d-flex mr-3">
-              <div class="media-body">
-              <h5>List based media object</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              </div>
-          </li>
-          <li class="media">
-              <img src="img/image4.jpg" class="d-flex mr-3">
-              <div class="media-body">
-              <h5>List based media object</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              </div>
-          </li>
-          <li class="media">
-              <img src="img/image4.jpg" class="d-flex mr-3">
-              <div class="media-body">
-              <h5>List based media object</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              </div>
-          </li>
-      </ul>
+        <!-- VALIDATION -->
+        <div class="form-group has-success">
+            <label for="username">Username</label>
+            <input type="text" class="form-control form-control-success" id="username">
+            <div class="form-control-feedback">Username available</div>
+            <small class="form-text text-muted">Must be at least 8 characters</small>
+        </div>
+        <div class="form-group has-warning">
+            <label for="password">Password</label>
+            <input type="text" class="form-control form-control-warning" id="password">
+            <div class="form-control-feedback">That password is not safe</div>
+            <small class="form-text text-muted">Please use a strong password</small>
+        </div>
+        <div class="form-group has-danger">
+            <label for="password2">Confirm Password</label>
+            <input type="text" class="form-control form-control-danger" id="password2">
+            <div class="form-control-feedback">Password does not match</div>
+            <small class="form-text text-muted">Must match the first password</small>
+        </div>
 
     </div><!-- ./container -->
     <div style="margin-top:500px;"></div>

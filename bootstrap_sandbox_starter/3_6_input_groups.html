@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1 class="display-3 text-center my-4">Media Object</h1>
+        <h1 class="display-3 text-center my-4">Input Groups & Addons</h1>
         <div class="container">
           <div class="row">
             <div class="col-md-3">
@@ -81,95 +81,54 @@
       <div class="container">
         <!--########################START HERE#########################-->
 
-      <!-- MEDIA OBJECT -->
-      <div class="media">
-          <img class="d-flex mr-3" src="img/image4.jpg">
-          <div class="media-body">
-              <h5 class="mt-0">Media heading</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-      </div>
-
-      <br><br>
-
-      <!-- NESTING MEDIA OBJECTS -->
-      <div class="media">
-          <img class="d-flex mr-3" src="img/image4.jpg">
-          <div class="media-body">
-              <h5>Media heading</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-              <div class="media mt-3">
-              <a class="d-flex pr-3" href="#">
-                  <img src="img/image4.jpg">
-              </a>
-              <div class="media-body">
-                  <h5 class="mt-0">Media heading</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              </div>
-              </div>
-          </div>
-      </div>
-
-      <br><br>
-
-      <!-- TOP ALIGNED (DEFAULT) -->
-      <div class="media">
-          <img class="d-flex mr-3 align-self-start" src="img/image4.jpg">
-          <div class="media-body">
-              <h5 class="mt-0">Media heading</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-      </div>
-
-      <br><br>
-
-      <!-- CENTER ALIGNED -->
-      <div class="media">
-          <img class="d-flex mr-3 align-self-center" src="img/image4.jpg">
-          <div class="media-body">
-              <h5 class="mt-0">Media heading</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-      </div>
-
-      <br><br>
-
-      <!-- BOTTOM ALIGNED -->
-      <div class="media">
-          <img class="d-flex mr-3 align-self-end" src="img/image4.jpg">
-          <div class="media-body">
-              <h5 class="mt-0">Media heading</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-      </div>
-
-      <br><br>
-
-      <!-- MEDIA LIST -->
-      <ul class="list-unstyled">
-          <li class="media">
-              <img src="img/image4.jpg" class="d-flex mr-3">
-              <div class="media-body">
-              <h5>List based media object</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              </div>
-          </li>
-          <li class="media">
-              <img src="img/image4.jpg" class="d-flex mr-3">
-              <div class="media-body">
-              <h5>List based media object</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              </div>
-          </li>
-          <li class="media">
-              <img src="img/image4.jpg" class="d-flex mr-3">
-              <div class="media-body">
-              <h5>List based media object</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              </div>
-          </li>
-      </ul>
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+        <br>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Email address">
+            <span class="input-group-addon">@something.com</span>
+        </div>
+        <br>
+        <label for="profile-url">Choose profile URL</label>
+        <div class="input-group">
+            <span class="input-group-addon">https://something.com/member/</span>
+            <input type="text" class="form-control" id="profile-url">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input class="form-control" type="text">
+            <span class="input-group-addon">.00</span>
+        </div>
+        <br>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input class="form-check mt-2" type="checkbox">
+            </span>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon">
+                <input type="radio">
+            </span>
+            <span class="input-group-addon">$5.00</span>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">Search</button>
+            </span>
+        </div>
 
     </div><!-- ./container -->
     <div style="margin-top:500px;"></div>
