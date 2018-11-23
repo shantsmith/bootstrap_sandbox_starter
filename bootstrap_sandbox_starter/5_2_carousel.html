@@ -85,7 +85,7 @@
     <div id="slider1" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-          <img src="img/image1.jpg" alt="First Slide" class="d-block img-fluid">
+          <img src="img/image1.jpg" alt="First Slide" class="d-block img-fluid">    <!-- we're using d-block  to display images as block becouse by defult they are inline. img-fluid is used becouse it will take up it's container and it's responsive. -->
         </div>
         <div class="carousel-item">
           <img src="img/image2.jpg" alt="Second Slide" class="d-block img-fluid">
@@ -195,6 +195,7 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
   <script>
     $('.carousel').carousel({
       interval: 5000,
@@ -211,5 +212,15 @@
       console.log('completed');
     });
   </script>
+    <!-- interval sets the speed of changing slides -->
+    <!-- keyboard is used for enabling control by keyboard for slide -->
+    <!-- pause is used to set puase event for slide -->
+    <!-- wrap is true by defualt. it means when the slide reaches the last image, it will restart from the first image -->
+
+    <!-- the second script: whenever the silde changes a picture(slides), it'll fire up that event. in this case in console sends slide -->
+
+    <!-- the third script: this event is fired when the carousel has completed its slide transition  -->
+
+
 </body>
 </html>

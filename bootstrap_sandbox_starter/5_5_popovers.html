@@ -82,9 +82,64 @@
     <!--########################START HERE#########################-->
 
     <!-- POPOVER -->
+<button
+class="btn  btn-danger"
+data-toggle="popover"
+data-placement="top"
+title="Popover Title"
+data-content="Le velit esse cil">
+Toggle popover
+</button>
 
+<button
+class="btn  btn-primary"
+data-toggle="popover"
+data-placement="right"
+title="Popover Title"
+data-content="Le velit esse cil">
+Toggle popover
+</button>
 
+<button
+class="btn  btn-warning"
+data-toggle="popover"
+data-placement="bottom"
+title="Popover Title"
+data-content="Le velit esse cil">
+Toggle popover
+</button>
+
+<button
+class="btn  btn-info"
+data-toggle="popover"
+data-placement="left"
+title="Popover Title"
+data-content="Le velit esse cil">
+Toggle popover
+</button>
+
+<br><br>
     <!-- DISMISSIBLE POPOVER -->
+    <button
+    id="myPopover"
+    class="btn  btn-info"
+    data-toggle="popover"
+    data-placement="right"
+    title="Dismissible Popover"
+    data-trigger="focus"
+    data-content="Le velit esse cil">
+    Toggle popover
+    </button>
+
+<hr>
+<!-- CONTROL WITH JS -->
+<button class="btn btn-secondary" onclick="showPopover()">show
+Popover</button>
+<button class="btn btn-secondary" onclick="hidePopover()">hide
+Popover</button>
+<button class="btn btn-secondary" onclick="togglePopover()">toggle
+Popover</button>
+
   </div>
 
   <div style="margin-top:500px;"></div>
@@ -94,5 +149,40 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script>
+$('[data-toggle="popover"]').popover();
+
+
+function showPopover(){
+  $('#myPopover').popover('show');
+}
+
+function hidePopover(){
+  $('#myPopover').popover('hide');
+}
+
+function togglePopover(){
+  $('#myPopover').popover('toggle');
+}
+
+
+//Popover Events
+$('#myPopover').on('show.bs.popover',function(){
+  console.log('Popover show');
+});
+
+$('#myPopover').on('shown.bs.popover',function(){
+  console.log('Popover shown');
+});
+
+$('#myPopover').on('hide.bs.popover',function(){
+  console.log('Popover hide');
+});
+
+$('#myPopover').on('hidden.bs.popover',function(){
+  console.log('Popover hidden');
+});
+</script>
+
 </body>
 </html>
