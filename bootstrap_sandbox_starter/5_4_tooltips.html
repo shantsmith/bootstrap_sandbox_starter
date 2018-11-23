@@ -82,9 +82,31 @@
     <!--########################START HERE#########################-->
 
     <!-- TOOLTIPS -->
+    <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tootip on top">Tooltip On Top</button>
+    <button class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Tootip on right">Tooltip On Right</button>
+    <button class="btn btn-warning" data-toggle="tooltip" data-placement="bottom" title="Tootip on bottom">Tooltip On Bottom</button>
+    <button class="btn btn-info" data-toggle="tooltip" data-placement="left" title="Tootip on left">Tooltip On Left</button>
 
+    <br><br>
 
     <!-- TOOLTIPS WITH HTML -->
+    <button id="hello" class="btn btn-primary" data-toggle="tooltip" data-placement="top" data-html="true" title="<h3>Hello World</h3><p>Lorem ipsum dolor sit.</p>">Tooltip On Top</button>
+
+    <hr>
+
+    <!-- TRIGGER WITH JS -->
+    <button class="btn btn-secondary" onclick="showToolTip()">
+      Show Tooltip
+    </button>
+
+    <button class="btn btn-secondary" onclick="hideToolTip()">
+      Hide Tooltip
+    </button>
+
+    <button class="btn btn-secondary" onclick="toggleToolTip()">
+      Toggle Tooltip
+    </button>
+
   </div>
 
   <div style="margin-top:500px;"></div>
@@ -94,5 +116,38 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script>
+    // Init tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+
+    function showToolTip(){
+      $('#hello').tooltip('show');
+    }
+
+    function hideToolTip(){
+      $('#hello').tooltip('hide');
+    }
+
+    function toggleToolTip(){
+      $('#hello').tooltip('toggle');
+    }
+
+    // Tooltip Events
+    $('#hello').on('show.bs.tooltip', function(){
+      console.log('Tooltip Show');
+    });
+
+    $('#hello').on('shown.bs.tooltip', function(){
+      console.log('Tooltip Shown');
+    });
+
+    $('#hello').on('hide.bs.tooltip', function(){
+      console.log('Tooltip hide');
+    });
+
+    $('#hello').on('hidden.bs.tooltip', function(){
+      console.log('Tooltip hidden');
+    });
+  </script>
 </body>
 </html>
